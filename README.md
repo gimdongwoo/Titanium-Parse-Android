@@ -2,7 +2,11 @@
 
 ## Description
 
-Appcelerator Titanium module for the Parse SDK. This module currently only support Android Push Notifications
+Appcelerator Titanium module for the Parse SDK.
+
+**This module currently only support Android Push Notifications.**
+
+**Strongly recommended, to use [TiParseJS](https://github.com/nitrag/TiParseJS) with this module, for the entire functions.**
 
 - This module forked and maintained from original repository : [timanrebel/Parse](https://github.com/timanrebel/Parse)
 
@@ -110,28 +114,6 @@ Android by design has no deviceToken like iOS has. Everytime you install an app 
 See for reference this [StackOverflow](http://stackoverflow.com/questions/2785485/is-there-a-unique-android-device-id) thread.
 
 This can be easily overcome since version 0.9 of this module using the strategy found on [Parse questions](https://www.parse.com/questions/check-for-duplicate-installations-of-same-user-on-re-installation-of-app).
-
-### Deploy Parse Cloudcode
-
-First install the CLI tool:
-```
-    curl -s https://www.parse.com/downloads/cloud_code/installer.sh | sudo /bin/bash
-```
-Go the Cloudcode directory in this repo and issue the following commands:
-```
-    echo "{}" > config/local.json
-    parse add --local
-    parse default "your parse app name"
-```
-
-If you've set your application as default you can now deploy:
-```
-    parse deploy
-```
-
-This will create your CloudCode application which resolves the duplicate Android installs by inspecting the AndroidID.
-
-Checkout the [Parse Manual](https://www.parse.com/docs/js/guide#cloud-code) for further information.
 
 ## Notification image and color
 
